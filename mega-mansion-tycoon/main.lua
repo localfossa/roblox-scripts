@@ -20,9 +20,9 @@ if game.PlaceId == 8328351891 then
 	end
 
 	function touchInterest(part)
-		firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, part, 0)
+		firetouchinterest(Players.LocalPlayer.Character.HumanoidRootPart, part, 0)
 		task.wait()
-		firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, part, 1)
+		firetouchinterest(Players.LocalPlayer.Character.HumanoidRootPart, part, 1)
 	end
 
 	local Window = Library:MakeWindow({
