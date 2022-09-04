@@ -4,7 +4,6 @@ if getgenv()["Already Running"] then return else getgenv()["Already Running"] = 
 local UserInputService = game:GetService("UserInputService")
 local VirtualInputManager = game:GetService("VirtualInputManager")
 local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
 --Variables--
 local LocalPlayer = Players.LocalPlayer
 local Camera = workspace.CurrentCamera
@@ -70,7 +69,7 @@ coroutine.wrap(function()
         end
 
         if (Settings.Delay <= 0) then
-            RunService.RenderStepped:Wait()
+            task.wait() -- This equals to Heartbeat:Wait()
         else
             task.wait(Settings.Delay)
         end
